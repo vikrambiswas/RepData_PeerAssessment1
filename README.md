@@ -78,9 +78,12 @@ assignment so you do not have to download the data separately.
 
 Show any code that is needed to
 
-1. Load the data (i.e. `read.csv()`)
+library("data.table")
+library(ggplot2)
 
-2. Process/transform the data (if necessary) into a format suitable for your analysis
+fileUrl <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
+download.file(fileUrl, destfile = paste0(getwd(), '/repdata%2Fdata%2Factivity.zip'), method = "curl")
+unzip("repdata%2Fdata%2Factivity.zip",exdir = "data")
 
 
 ### What is mean total number of steps taken per day?
