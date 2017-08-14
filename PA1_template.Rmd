@@ -1,8 +1,8 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
 output: 
-  Author: Vikram Biswas
-  Date: 8/13/2017
+  Author: "Vikram Biswas"
+  Date: "8/13/2017"
     keep_md: true
 ---
 
