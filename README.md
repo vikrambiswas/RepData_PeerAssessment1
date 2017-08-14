@@ -76,15 +76,14 @@ assignment so you do not have to download the data separately.
 
 ### Loading and preprocessing the data
 
-Show any code that is needed to
-
+```
 library("data.table")
 library(ggplot2)
 
 fileUrl <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
 download.file(fileUrl, destfile = paste0(getwd(), '/repdata%2Fdata%2Factivity.zip'), method = "curl")
 unzip("repdata%2Fdata%2Factivity.zip",exdir = "data")
-
+```
 
 ### What is mean total number of steps taken per day?
 
