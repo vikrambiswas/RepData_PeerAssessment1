@@ -40,7 +40,7 @@ head(Total_Steps, 10)
 ggplot(Total_Steps, aes(x = steps)) +
     geom_histogram(fill = "blue", binwidth = 1000) +
     labs(title = "Daily Steps", x = "Steps", y = "Frequency")
-    ```
+```
 ![Graph 1](https://github.com/vikrambiswas/RepData_PeerAssessment1/blob/master/doc/unnamed-chunk-4-1.png)
 
 ## What is the average daily activity pattern?
