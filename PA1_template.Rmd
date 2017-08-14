@@ -43,6 +43,15 @@ ggplot(Total_Steps, aes(x = steps)) +
 ```
 ![Graph 1](https://github.com/vikrambiswas/RepData_PeerAssessment1/blob/master/doc/unnamed-chunk-4-1.png)
 
+```
+Total_Steps[, .(Mean_Steps = mean(steps, na.rm = TRUE), Median_Steps = median(steps, na.rm = TRUE))]
+```
+
+```
+##    Mean_Steps Median_Steps
+## 1:   10766.19        10765
+```
+
 ## What is the average daily activity pattern?
 
 
