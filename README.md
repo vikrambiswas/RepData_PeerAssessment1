@@ -87,12 +87,33 @@ unzip("repdata%2Fdata%2Factivity.zip",exdir = "data")
 
 ### What is mean total number of steps taken per day?
 
-For this part of the assignment, you can ignore the missing values in
-the dataset.
+```
+Total_Steps <- activityDT[, c(lapply(.SD, sum, na.rm = FALSE)), .SDcols = c("steps"), by = .(date)] 
 
-1. Make a histogram of the total number of steps taken each day
+head(Total_Steps, 10)
+```
 
-2. Calculate and report the **mean** and **median** total number of steps taken per day
+```
+##           date steps
+##  1: 2012-10-01    NA
+##  2: 2012-10-02   126
+##  3: 2012-10-03 11352
+##  4: 2012-10-04 12116
+##  5: 2012-10-05 13294
+##  6: 2012-10-06 15420
+##  7: 2012-10-07 11015
+##  8: 2012-10-08    NA
+##  9: 2012-10-09 12811
+## 10: 2012-10-10  9900
+```
+
+```
+ggplot(Total_Steps, aes(x = steps)) +
+    geom_histogram(fill = "blue", binwidth = 1000) +
+    labs(title = "Daily Steps", x = "Steps", y = "Frequency")
+```
+
+
 
 
 ### What is the average daily activity pattern?
